@@ -287,6 +287,25 @@ section {
   box-shadow: 0 10px 20px rgba(13, 148, 136, 0.25);
 }
 
+.nav-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #0f172a;
+  color: #ffffff !important;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
+}
+
+.nav-github:hover {
+  background-color: var(--color-teal);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(13, 148, 136, 0.25);
+}
+
 .mobile-menu-btn {
   display: none;
   color: var(--color-text-dark);
@@ -335,6 +354,30 @@ section {
 .mobile-nav-link:hover {
   color: var(--color-teal);
   padding-left: 8px;
+}
+
+.mobile-nav-links .mobile-nav-github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: var(--radius-full);
+  margin-top: 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
+}
+
+.mobile-nav-links .mobile-nav-github:hover {
+  background-color: var(--color-teal);
+  transform: translateY(-2px);
+  padding-left: 0;
+  color: #ffffff;
 }
 
 .backdrop-overlay {
@@ -2018,6 +2061,19 @@ section {
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+  .nav-links {
+    gap: 14px;
+  }
+  .nav-link {
+    font-size: 0.85rem;
+  }
+  .nav-cta, .nav-github {
+    padding: 8px 16px;
+    font-size: 0.85rem;
   }
 }
 
